@@ -12,7 +12,7 @@ public class ConnectionFactory
 {
     private static final Logger LOGGER = Logger.getLogger(ConnectionFactory.class.getName());
 
-    public static final String URL = "jdbc:mysql://localhost/collectables?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+    public static final String URL = "jdbc:mysql://localhost:3306/collectables?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     public static final String USER = "collectables";
     public static final String PASS = "collectables";
     public static Connection getConnection()
@@ -29,21 +29,21 @@ public class ConnectionFactory
             LOGGER.log(WARNING, ANSI_RED + "Rejected" + ANSI_RESET);
             System.err.println(e.getMessage());
         }
-        finally
-        {
-            try
-            {
-                if (conn != null)
-                {
-                    conn.close();
-                }
-                LOGGER.log(INFO, ANSI_CYAN + "Connection closed.");
-            }
-            catch (SQLException e)
-            {
-                e.printStackTrace();
-            }
-        }
+//        finally
+//        {
+//            try
+//            {
+//                if (conn != null)
+//                {
+//                    conn.close();
+//                }
+//                LOGGER.log(INFO, ANSI_CYAN + "Connection closed.");
+//            }
+//            catch (SQLException e)
+//            {
+//                e.printStackTrace();
+//            }
+//        }
 
         return conn;
     }
@@ -53,4 +53,3 @@ public class ConnectionFactory
         Connection connection = ConnectionFactory.getConnection();
     }
 }
-

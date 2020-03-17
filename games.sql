@@ -1,13 +1,13 @@
 CREATE TABLE games (
-    id INT(11) NOT NULL AUTO_INCREMENT,
-    title VARCHAR(150) NOT NULL,
-    publisher VARCHAR(150),
-    genre VARCHAR(150),
-    platform VARCHAR(50) NOT NULL,
-    release_date DATE NOT NULL,
-    franchise VARCHAR(150),
+    id INT(11) NOT NULL AUTO_INCREMENT, 
+    title VARCHAR(150) NOT NULL, 
+    publisher VARCHAR(150), 
+    genre VARCHAR(150), 
+    platform VARCHAR(50) NOT NULL, 
+    release_date DATE NOT NULL, 
+    franchise VARCHAR(150), 
     CONSTRAINT game_pk PRIMARY KEY (id)
-);
+    );
 INSERT INTO games (
     title,
     publisher,
@@ -59,3 +59,6 @@ INSERT INTO games (
     franchise
 )
 VALUES ('Fire Emblem: Awakening', 'Nintendo', 'Strategy', 'Nintendo 3DS', '2012-04-19', 'Fire Emblem');
+
+CREATE USER 'collectables'@'localhost' IDENTIFIED BY 'collectables';
+GRANT DELETE, INSERT, SELECT, UPDATE ON collectables.games TO 'collectables'@'localhost';

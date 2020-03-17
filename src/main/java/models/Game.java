@@ -1,8 +1,12 @@
+/* The Game DTO */
+
 package models;
+
+import daos.MyDto;
 
 import java.util.Date;
 
-public class Game
+public class Game implements MyDto
 {
     private Integer id;
     private String title;
@@ -14,7 +18,6 @@ public class Game
 
     public Game()
     {
-
     }
 
     public Game(String title, String publisher, String genre, String platform, Date releaseDate, String franchise)
