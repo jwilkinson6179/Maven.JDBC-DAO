@@ -50,3 +50,12 @@ INSERT INTO games (
     release_date
 )
 VALUES ('Tabletop Simulator', 'Berserk Games', 'Casual', 'Windows', '2015-06-05');
+INSERT INTO games (
+    title,
+    publisher,
+    genre,
+    platform,
+    release_date,
+    franchise
+)
+VALUES ('Fire Emblem: Awakening', 'Nintendo', 'Strategy', 'Nintendo 3DS', '2012-04-19', 'Fire Emblem');
