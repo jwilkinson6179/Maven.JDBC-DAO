@@ -4,7 +4,7 @@ package models;
 
 import daos.MyDto;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Game implements MyDto
 {

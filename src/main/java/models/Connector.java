@@ -8,9 +8,9 @@ import java.util.logging.Logger;
 import static java.util.logging.Level.*;
 import static models.ColorConstants.*;
 
-public class ConnectionFactory
+public class Connector
 {
-    private static final Logger LOGGER = Logger.getLogger(ConnectionFactory.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(Connector.class.getName());
 
     public static final String URL = "jdbc:mysql://localhost:3306/collectables?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     public static final String USER = "collectables";
@@ -50,6 +50,6 @@ public class ConnectionFactory
 
     public static void main(String[] args)
     {
-        Connection connection = ConnectionFactory.getConnection();
+        Connection connection = Connector.getConnection();
     }
 }

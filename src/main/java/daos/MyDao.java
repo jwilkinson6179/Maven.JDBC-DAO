@@ -8,7 +8,7 @@ public interface MyDao<T>
 
     public List findAll();
 
-    public T update(T dto);
+    public void update(T dto);
 
     public T create(T dto);
 
