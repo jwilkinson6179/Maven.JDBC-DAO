@@ -29,21 +29,6 @@ public class Connector
             LOGGER.log(WARNING, ANSI_RED + "Rejected" + ANSI_RESET);
             System.err.println(e.getMessage());
         }
-//        finally
-//        {
-//            try
-//            {
-//                if (conn != null)
-//                {
-//                    conn.close();
-//                }
-//                LOGGER.log(INFO, ANSI_CYAN + "Connection closed.");
-//            }
-//            catch (SQLException e)
-//            {
-//                e.printStackTrace();
-//            }
-//        }
 
         return conn;
     }
